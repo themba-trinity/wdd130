@@ -1,19 +1,20 @@
 :root {
-    --heading-background-color: #fo6;
+    --heading-background-color: #f06;
     --heading-text-color: #333;
     --heading-font: 'Montserrat', Helvetica, sans-serif;
     --padding: 1rem;
-    --border: 1px solid rgb(0, 0, 0, 0.1);
+    --border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
     background-color: var(--heading-background-color);
-    padding: auto;
+    padding: 1rem;
 }
 
 body {
@@ -38,23 +39,18 @@ main {
 main img {
     width: 150px;
     height: auto;
-    border: #333;
+    border: 1px solid #333;
     padding: 10px;
-    box-shadow: none;
-}
-
-p {
-    padding: 0;
+    float: right;
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0, 0, 0, 0.2);
-    padding: 1rem;
+    width: 20em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: beige;
     color: #333;
-    text-overflow: centre;
+    text-align: centre;
+    margin: 1rem auto;
 }
 
 aside img {
@@ -75,7 +71,7 @@ h2 {
 img {
     width: 100%;
     height: auto;
-    box-shadow: 30px 20px 30px #333;
+    box-shadow: 5px 5px 15px #333;
 
 }
 
@@ -87,10 +83,6 @@ section {
     font-size: .9rem;
 }
 
-section p {
-    margin: 10px;
-}
-
 ul {
     margin: 20px;
 }
@@ -98,6 +90,40 @@ ul {
 footer {
     font-size: .9rem;
     margin-top: 15px;
-    border-top: 1px solid var(--text-color);
+    border-top: 1px solid var(--heading-text-color);
     text-align: center;
+}
+
+/* Class Selectors */
+.box {
+    position: relative;
+    margin: 1rem;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container h2 {
+    position: absolute;
+    top: 20px;
+    left: 20;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 1.2rem;
 }
