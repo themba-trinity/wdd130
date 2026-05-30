@@ -78,7 +78,6 @@ nav a {
     font-weight: bold;
     display: block;
     padding: 0.5rem 1.5rem;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -100,10 +99,6 @@ aside {
     border: 1px solid #ccc;
 }
 
-main {
-    grid-column: 1/2;
-}
-
 .hero img {
     display: block;
     width: 100%;
@@ -112,6 +107,7 @@ main {
 }
 
 .hero {
+    position: relative;
     text-align: center;
     margin: 2rem 0;
 }
@@ -124,6 +120,7 @@ main {
 }
 
 .hero h1 {
+    position: absolute;
     font-weight: normal;
     font-size: 1.5rem;
     text-align: center;
@@ -147,6 +144,7 @@ main {
 }
 
 main {
+    grid-column: 1/2;
     flex: 1;
     max-width: 840px;
     margin: 0;
