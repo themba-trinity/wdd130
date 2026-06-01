@@ -1,9 +1,9 @@
 :root {
     --primary-color: #000;
     --secondary-color: #d4c5f9;
-    accent-color: #999;
+    --accent-color: #999;
     --heading-font: "Georgia", serif;
-    --body-font: "Aril", Helvetica, sans-serif;
+    --body-font: "Arial", Helvetica, sans-serif;
 }
 
 * {
@@ -24,15 +24,16 @@ body {
     padding: 0;
 }
 
-header .grid footer {
+header,
+.grid,
+footer {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 header {
-    border: 1px solid#999;
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     background-color: var(--secondary-color);
     padding: 0.5rem 1rem;
@@ -42,8 +43,12 @@ header {
 header img {
     width: 220px;
     height: auto;
-    margin-bottom: 15px;
-    display: block;
+    margin: 0;
+    justify-content: start;
+}
+
+header nav {
+    justify-self: end;
 }
 
 section:last-of-type p {
@@ -59,7 +64,7 @@ section {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -98,17 +103,30 @@ aside {
     border: 1px solid #ccc;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
 .hero {
     position: relative;
     text-align: center;
     margin: 2rem 0;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 80%;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .hero-content {
@@ -198,7 +216,7 @@ article img {
     height: auto;
 }
 
-.adventure {
+.adventures {
     padding: 2rem 0;
     text-align: center;
 }
@@ -211,15 +229,16 @@ article img {
 
 .adventure-gallery {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 1rem;
     text-align: center;
+    overflow-x: auto;
 }
 
 .adventure-gallery figure {
-    flex: 1 1 150px;
-    margin: 0;
+    flex: 0 0 150px;
+    text-align: center;
 }
 
 .adventure figure {
@@ -297,7 +316,7 @@ footer p {
         margin: 0 auto 15px;
     }
 
-    .solialmedia img {
+    .socialmedia img {
         width: 30px;
         height: 30px;
     }
