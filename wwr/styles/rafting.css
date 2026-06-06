@@ -21,32 +21,36 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* logo left, nav next to it */
     align-items: center;
+    gap: 30px;
     background-color: var(--secondary-color);
-    padding: 0.5rem 1rem;
+    padding: 15px 20px;
 }
 
-header .logo {
-    width: 200px;
+header img {
+    width: 180px;
     height: auto;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-nav a {
+header nav a {
     text-decoration: none;
-    color: #000;
     font-weight: bold;
+    color: #0000ee;
     padding: 0.5rem 1rem;
 }
 
-nav a:hover {
-    color: var(--accent-color);
+header nav a:hover {
+    color: #2a9d8f;
 }
 
 .hero {
@@ -128,6 +132,36 @@ nav a:hover {
     border-radius: 6px;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "map contact"
+        "employees employees";
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact-form {
+    grid-area: contact;
+    margin-bottom: 20px;
+}
+
+.employees {
+    grid-area: employees;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.employees figure {
+    text-align: center;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -138,14 +172,32 @@ footer {
 
 footer p {
     font-weight: bold;
+    margin: 0;
 }
 
-.socialmedia {
+footer .socialmedia {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
-.socialmedia img {
+footer .socialmedia img {
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* single column */
+        grid-template-areas:
+            "map"
+            "contact"
+            "employees";
+    }
+
+    .employees {
+        flex-direction: column;
+    }
 }

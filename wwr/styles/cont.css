@@ -1,0 +1,103 @@
+/* =========================
+   Header: Logo + Navigation
+   ========================= */
+header {
+    display: flex;
+    justify-content: flex-start;
+    /* logo left, nav next to it */
+    align-items: center;
+    gap: 30px;
+    /* spacing between logo and nav */
+    padding: 15px 20px;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0000ee;
+}
+
+header nav a:hover {
+    color: #2a9d8f;
+    /* accent hover color */
+}
+
+/* =========================
+   Main Grid Layout
+   ========================= */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "map contact"
+        "employees employees";
+}
+
+.map {
+    grid-area: map;
+}
+
+.conatct-form {
+    grid-area: contact;
+    margin-bottom: 20px;
+}
+
+.employees {
+    grid-area: employees;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.employees figure {
+    text-align: center;
+}
+
+/* =========================
+   Footer Layout
+   ========================= */
+footer .socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+footer .socialmedia p {
+    margin: 0;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* single column */
+        grid-template-areas:
+            "map"
+            "contact"
+            "employees";
+    }
+
+    .employees {
+        flex-direction: column;
+        /* stack employee images */
+    }
+}
