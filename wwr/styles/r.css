@@ -2,7 +2,6 @@
     --primary-color: #000;
     --secondary-color: #d4c5f9;
     --accent-color: #999;
-    --accent1-color: #ff6600;
     --heading-font: "Georgia", serif;
     --body-font: "Arial", Helvetica, sans-serif;
 }
@@ -20,10 +19,10 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: flex-start;
+    /* logo left, nav next to it */
     align-items: center;
     gap: 30px;
     background-color: var(--secondary-color);
@@ -54,7 +53,6 @@ header nav a:hover {
     color: #2a9d8f;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -92,7 +90,6 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-/* History Section */
 .history {
     padding: 2rem;
     text-align: center;
@@ -110,7 +107,6 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-/* Adventures Section */
 .adventures {
     padding: 2rem;
     text-align: center;
@@ -136,97 +132,6 @@ header nav a:hover {
     border-radius: 6px;
 }
 
-/* CTA Grid */
-.cta-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-.cta-text h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--secondary-color);
-}
-
-.cta-top {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-/* Purpose Grid */
-.purpose-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.purpose-card {
-    background-color: white;
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.purpose-card h3 {
-    color: var(--accent1-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Trip Grid */
-.trip-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.trip-card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.trip-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.trip-card h2 {
-    color: var(--primary-color);
-    padding: 1rem 1rem 0;
-    font-size: 1.2rem;
-}
-
-.trip-card p {
-    padding: 0 1rem 1rem;
-}
-
-/* Contact Grid */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -246,6 +151,8 @@ header nav a:hover {
 }
 
 .employees {
+
+    text-align: center;
     grid-area: employees;
     display: flex;
     justify-content: center;
@@ -253,35 +160,18 @@ header nav a:hover {
     margin-top: 20px;
 }
 
+.employees h2 {
+    flex-wrap: wrap;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
+
 .employees figure {
     text-align: center;
 }
 
-/* Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    text-align: left;
-}
-
-th {
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -307,10 +197,10 @@ footer .socialmedia img {
     height: 30px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
+        /* single column */
         grid-template-areas:
             "map"
             "contact"
